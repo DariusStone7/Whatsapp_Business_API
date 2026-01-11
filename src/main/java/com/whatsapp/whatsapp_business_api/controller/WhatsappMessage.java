@@ -28,9 +28,9 @@ public class WhatsappMessage {
     }
 
     @PostMapping("/")
-    public ResponseEntity<String> handleWebhook(@RequestBody() Map<String, Object> body){
+    public ResponseEntity<Void> handleWebhook(@RequestBody() Map<String, Object> body){
         System.out.println(body);
 
-        return  ResponseEntity.ok("Webhook recieved");
+        return  ResponseEntity.ok().build();
     }
 }
