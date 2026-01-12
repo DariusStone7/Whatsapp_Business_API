@@ -28,7 +28,7 @@ public class WhatsappMessage {
 
         System.out.println("verify_token = " + this.verify_token);
         System.out.println("mode: " + mode + " challenge: " + challenge + " token: " + token);
-        if(mode.equals("subscribe") && this.verify_token.equals(token)){
+        if(mode == "subscribe" && this.verify_token == token){
             System.out.println("WEBHOOK VERIFY");
             return ResponseEntity.ok(challenge);
         }
